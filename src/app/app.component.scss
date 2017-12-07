@@ -1,6 +1,8 @@
 @import '../assets/styles/variables';
 
 $aside-w : 30%;
+$aside-p : 35px;
+$hearder: 60px;
 
 aside{
     background: $background;
@@ -8,10 +10,10 @@ aside{
     width: $aside-w;
     position: fixed;
     section{
-        padding: 0 35px;
+        padding: 0 $aside-p;
         .list-group{
             li{
-                padding:25px 0;
+                padding:25px  0;
             }
         }
     }
@@ -22,23 +24,32 @@ main{
 }
 
 header{
-    height: 60px;
+    height: $hearder;
     border: $border;
 }
 
 #filterUsers{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    color:$text-strong;
     input{
         background: transparent;
-        
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-pack: start;
-            -ms-flex-pack: start;
-            justify-content: flex-start;
+        border-width: 0px;
+        &[type="search"]{
+            font-style: italic;
+            padding: 0 $aside-p;
+            -webkit-box-flex: 1;
+            -ms-flex-positive: 1;
+            flex-grow: 1;
+        }
     }
     .button{
-        height: 60px;
-        width: 60px;
+        height: $hearder;
+        width: $hearder;
+        border-left-width: 1px;
     }
 }
