@@ -1,0 +1,44 @@
+@import '../assets/styles/variables';
+
+$aside-w : 30%;
+
+aside{
+    background: $background;
+    height: 100%;
+    width: $aside-w;
+    position: fixed;
+    section{
+        padding: 0 35px;
+        .list-group{
+            li{
+                padding:25px 0;
+            }
+        }
+    }
+}
+main{
+    width: calc(100% - #{$aside-w});
+    margin-left: $aside-w;
+}
+
+header{
+    height: 60px;
+    border: $border;
+}
+
+#filterUsers{
+    input{
+        background: transparent;
+        
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: start;
+            -ms-flex-pack: start;
+            justify-content: flex-start;
+    }
+    .button{
+        height: 60px;
+        width: 60px;
+    }
+}

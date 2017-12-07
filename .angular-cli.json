@@ -19,7 +19,10 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.styl"
+        "styles.scss",
+        "../node_modules/normalize.css/normalize.css",
+        "../node_modules/flexboxgrid/dist/flexboxgrid.min.css",
+        "assets/styles/main.scss"
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",
@@ -54,7 +57,7 @@
     }
   },
   "defaults": {
-    "styleExt": "styl",
+    "styleExt": "scss",
     "component": {}
   }
 }
