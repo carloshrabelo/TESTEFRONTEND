@@ -1,0 +1,14 @@
+.list-group{
+    margin: 0px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+    li{
+        padding: $padding;
+        display: block;
+        border-bottom: $border
+    }
+}
