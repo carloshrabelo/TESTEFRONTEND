@@ -21,9 +21,13 @@ aside{
 main{
     width: calc(100% - #{$aside-w});
     margin-left: $aside-w;
+    header{
+        padding-left: $aside-p;
+    }
 }
 
 header{
+    line-height: $hearder;
     height: $hearder;
     border: $border;
 }
