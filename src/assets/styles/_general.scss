@@ -10,6 +10,7 @@ html{
     overflow-x: hidden;
     overflow-y: auto;
     text-rendering: $body-rendering;
+    color: $text;
 }
 body, button, input, select, textarea{
     font-family: $family-primary
