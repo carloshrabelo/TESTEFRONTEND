@@ -31,29 +31,6 @@
     </li>
   </ul>
   <section class="separator">
-      <div class="big-number">
-        <div class="big-number-label">
-          Saldo
-        </div>
-        <span class="big-number-value"> 2.274,73 </span>      
-      </div>
-      <div class="big-number">
-        <div class="big-number-label">
-          Saldo
-        </div>
-        <span class="big-number-value"> 2.274,73 </span>      
-      </div>
-      <div class="big-number">
-        <div class="big-number-label">
-          Saldo
-        </div>
-        <span class="big-number-value"> 2.274,73 </span>      
-      </div>
-      <div class="big-number">
-        <div class="big-number-label">
-          Saldo
-        </div>
-        <span class="big-number-value"> 2.274,73 </span>      
-      </div>
+    <big-number *ngFor="let arr of [1,2,3,4,5]" label="Saldo" [value]="2274.73"></big-number>
   </section>
 </main>  
