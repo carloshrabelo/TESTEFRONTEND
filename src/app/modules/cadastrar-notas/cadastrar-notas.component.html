@@ -1,0 +1,39 @@
+<section>
+    <header>Cadastrar notas</header>
+    <p class="sub-header">Você precisa confirmar o cadastro dessa linha de notas</p>    
+    <div  class="columns">
+        <div class="column">
+          <table class="table">
+            <thead>
+                <tr>
+                  <th>Loja</th>
+                  <th>No da Nota</th>
+                  <th>Data da nota</th>
+                  <th>Cadastro</th>
+                  <th>Valor</th>
+                  <th class="td-options"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let arr of [1,2,3]" >
+                  <td>Loja</td>
+                  <td>No da Nota</td>
+                  <td>Data da nota</td>
+                  <td>Cadastro</td>
+                  <td>Valor</td>
+                  <td>
+                    <button class="button button-link fa fa-ellipsis-v"></button>
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+          </div>
+        </div>
+        <div class="columns">
+          <div class="column text-right">
+            <button class="button button button-lg"> Cancelar </button>
+            <button class="button button-primary button-lg"> Cadastrar </button>
+          </div>
+    </div>
+</section>
+    
