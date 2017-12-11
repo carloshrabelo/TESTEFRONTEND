@@ -22,15 +22,19 @@ aside{
 main{
     width: calc(100% - #{$aside-w});
     margin-left: $aside-w;
-    header{
+    >header{
         padding-left: $aside-p;
     }
 }
 
 header{
+    border-bottom: $border;
     line-height: $hearder;
     height: $hearder;
-    border-bottom: $border;
+}
+
+.content{
+    padding: $aside-p
 }
 
 #filterUsers{
