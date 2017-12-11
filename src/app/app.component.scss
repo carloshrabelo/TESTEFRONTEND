@@ -9,6 +9,7 @@ aside{
     height: 100%;
     width: $aside-w;
     position: fixed;
+    border-right: $border;
     section{
         padding: 0 $aside-p;
         .list-group{
@@ -29,7 +30,7 @@ main{
 header{
     line-height: $hearder;
     height: $hearder;
-    border: $border;
+    border-bottom: $border;
 }
 
 #filterUsers{
