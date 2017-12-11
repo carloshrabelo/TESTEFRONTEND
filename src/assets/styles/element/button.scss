@@ -38,10 +38,24 @@
     text-align: center;
     white-space: nowrap;
     font-weight: bolder;
+    &:focus{
+        outline: none;
+    }
+
+    &.button-lg{
+        line-height: 2;
+    }
 
     &.button-primary{
         background: $primary;
         border-color: darken( $primary, 10%);
         color:#fff;
+    }
+    &.button-link{
+        font-weight: normal;
+        border: 0px;
+        &:hover{
+            color: $primary;
+        }
     }
 }

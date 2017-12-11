@@ -4,13 +4,14 @@ import { NgModule, LOCALE_ID } from '@angular/core';
 import { AppComponent } from './app.component';
 import { BigNumberComponent } from './components/big-number/big-number.component';
 import { AdicionarNotaComponent } from './modules/adicionar-nota/adicionar-nota.component';
-import { TextMaskModule } from 'angular2-text-mask';
+import { CadastrarNotasComponent } from './modules/cadastrar-notas/cadastrar-notas.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BigNumberComponent,
-    AdicionarNotaComponent
+    AdicionarNotaComponent,
+    CadastrarNotasComponent
   ],
   imports: [
     BrowserModule
