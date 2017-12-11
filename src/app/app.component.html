@@ -7,10 +7,10 @@
   </header>
   <section>
     <ul class="list-group">
-      <li  *ngFor="let arr of [1,2,3,4,5]">
-        mail<br>
-        <b>Name</b><br>
-        Number<br>
+      <li  *ngFor="let cliente of clientes">
+        {{cliente.email}}<br>
+        <b>{{cliente.nome}}</b><br>
+        {{cliente.cpf}}<br>
       </li>
     </ul>
   </section>
