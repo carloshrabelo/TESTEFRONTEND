@@ -1,16 +1,20 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { BigNumberComponent } from './components/big-number/big-number.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    BigNumberComponent
   ],
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [
+    { provide: LOCALE_ID, useValue: 'pt-BR'}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
