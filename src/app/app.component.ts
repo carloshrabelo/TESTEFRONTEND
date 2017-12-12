@@ -28,6 +28,9 @@ export class AppComponent implements OnInit {
       this.clienteService.getPontos(cliente).then(response => this.validatePoints(response))   
     }
   }
+  public onSearchChange(filter){
+    this.clienteService.getClientes(filter).then(response => this.clientes = response );
+  }
   public clearSection(){
     this.clienteSelecionado = undefined;
     this.pontos = {};
