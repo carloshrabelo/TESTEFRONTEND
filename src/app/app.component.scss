@@ -10,6 +10,7 @@ aside{
     width: $aside-w;
     position: fixed;
     border-right: $border;
+    overflow: auto;
     section{
         padding: 0 $aside-p;
         .list-group{

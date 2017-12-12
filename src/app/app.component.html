@@ -1,19 +1,22 @@
 <aside>
-  <header>
-    <form id="filterUsers" action="">
-        <input type="search"/>        
-        <input class="button" type="submit" value="🔎">
-    </form>
-  </header>
-  <section>
-    <ul class="list-group">
-      <li  *ngFor="let cliente of clientes">
-        {{cliente.email}}<br>
-        <b>{{cliente.nome}}</b><br>
-        {{cliente.cpf}}<br>
-      </li>
-    </ul>
-  </section>
+  <cliente-detail *ngIf="clienteSelecionado" [cliente]="clienteSelecionado" (close)="clearSection()"></cliente-detail>    
+  <div *ngIf="!clienteSelecionado">
+    <header>
+        <form id="filterUsers" action="">
+            <input type="search"/>        
+            <input class="button" type="submit" value="🔎">
+        </form>
+      </header>
+      <section>
+        <ul class="list-group">
+          <li *ngFor="let cliente of clientes" (click)="selectClient(cliente)">
+            {{cliente.email}}<br>
+            <b>{{cliente.nome}}</b><br>
+            {{cliente.cpf}}<br>
+          </li>
+        </ul>
+      </section>
+  </div>
 </aside>
 <main>
   <header>

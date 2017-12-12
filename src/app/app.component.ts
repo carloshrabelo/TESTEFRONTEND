@@ -16,15 +16,21 @@ export class AppComponent implements OnInit {
 
   constructor(private clienteService: ClienteService) {
   }
+  ngOnInit(): void {
+    this.clienteService.getClientes().then(response => this.clientes = response );
+  }
 
   public selectClient(cliente?){
-    this.clienteSelecionado = undefined;
-    this.pontos = {};
+    this.clearSection()
 
     if(cliente){
       this.clienteService.getCliente(cliente).then(response => this.clienteSelecionado = response )   
       this.clienteService.getPontos(cliente).then(response => this.validatePoints(response))   
     }
+  }
+  public clearSection(){
+    this.clienteSelecionado = undefined;
+    this.pontos = {};
   }
 
   protected validatePoints(pontos){
@@ -32,7 +38,4 @@ export class AppComponent implements OnInit {
     this.pontos['saldo'] = pontos.total - pontos.utilizados - pontos.expirados
   }
 
-  ngOnInit(): void {
-    this.clienteService.getClientes().then(response => this.clientes = response );
-  }
 }
