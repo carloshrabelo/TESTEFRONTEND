@@ -37,7 +37,12 @@
         border-bottom: $border;
         border-radius: 3px;
         width: 100%;
-        padding-right: 2.25em
+        padding-right: 2.25em;
+
+      &:disabled{
+        background: #fbfbfb;
+        cursor: not-allowed;
+    }
   }
   &:after{
     content: '\2C6';

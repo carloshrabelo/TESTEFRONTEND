@@ -24,4 +24,7 @@ export class ClienteService {
   getPontos (id):Promise<any>{
     return new Promise( (resolve) => resolve(pontos) );
   }
+  postNotas(notas):Promise<any>{
+    return new Promise( (resolve) => resolve(notas) );
+  }
 }

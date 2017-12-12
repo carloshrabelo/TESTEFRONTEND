@@ -40,7 +40,7 @@
     <big-number label="Expirados" [value]="pontos.expirados"></big-number>
   </section>
   <div class="content">
-    <adicionar-nota></adicionar-nota>
+    <adicionar-nota [isDisabled]="!clienteSelecionado" (adicionarNota)="adicionarNota($event)"></adicionar-nota>
     <cadastrar-notas [notas]="notas"></cadastrar-notas>
   </div>
 </main>  
