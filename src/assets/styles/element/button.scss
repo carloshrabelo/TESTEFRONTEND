@@ -41,6 +41,9 @@
     &:focus{
         outline: none;
     }
+    &:hover:not(:disabled){
+        color: lighten($text, 10% );
+    }
 
     &.button-lg{
         line-height: 2;
@@ -50,6 +53,15 @@
         background: $primary;
         border-color: darken( $primary, 10%);
         color:#fff;
+        &:disabled{
+            background: desaturate( $primary, 50% );
+            border-color: desaturate(darken( $primary, 10%), 50%);
+            color: desaturate( #FFF, 50% );
+        }
+        &:hover:not(:disabled){
+            color:#fff;
+            background: lighten($primary, 10% );
+        }
     }
     &.button-link{
         font-weight: normal;

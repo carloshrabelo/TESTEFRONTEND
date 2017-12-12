@@ -13,6 +13,7 @@ export class AppComponent implements OnInit {
   clientes = [];
   pontos = {};
   clienteSelecionado;
+  notas=[];
 
   constructor(private clienteService: ClienteService) {
   }
@@ -32,6 +33,19 @@ export class AppComponent implements OnInit {
     this.clienteService.getClientes(filter).then(response => this.clientes = response );
   }
   public clearSection(){
+    if(this.notas.length){
+      var txt;
+      var mensagem = confirm("Você não salvou suas notas, deseja mesmo sair da página?");
+      if (mensagem == true) {
+          this.clear()
+      } else {
+          txt = "You pressed Cancel!";
+      }
+    }else{
+      this.clear()
+    }
+  }
+  protected clear(){
     this.clienteSelecionado = undefined;
     this.pontos = {};
   }
@@ -39,6 +53,14 @@ export class AppComponent implements OnInit {
   protected validatePoints(pontos){
     this.pontos = pontos;
     this.pontos['saldo'] = pontos.total - pontos.utilizados - pontos.expirados
+  }
+  adicionarNota(nota){
+    let id = !this.notas.length ? 0 : this.notas.reduce( ( val, last ) => val.id > last.id ? val : last  ).id
+    nota.id = id + 1
+    this.notas.push(nota)
+  }
+  salvarNotas(){
+    this.clienteService.postNotas(this.notas)
   }
 
 }
