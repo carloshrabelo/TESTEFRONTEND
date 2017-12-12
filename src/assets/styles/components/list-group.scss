@@ -6,8 +6,12 @@
     flex-direction: column;
     padding-left: 0;
     li{
+        cursor: pointer;
         padding: $padding;
         display: block;
-        border-bottom: $border
+        border-bottom: $border;
+        &:hover{
+            border-color: $primary
+        }
     }
 }

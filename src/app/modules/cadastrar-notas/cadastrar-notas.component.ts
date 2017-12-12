@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Input } from '@angular/core';
 
 @Component({
   selector: 'cadastrar-notas',
@@ -8,6 +9,9 @@ import { Component, OnInit } from '@angular/core';
 export class CadastrarNotasComponent implements OnInit {
 
   constructor() { }
+
+  @Input()
+  notas 
 
   ngOnInit() {
   }
