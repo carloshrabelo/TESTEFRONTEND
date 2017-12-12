@@ -8,14 +8,17 @@ import {pontos} from '../mock/pontos';
 export class ClienteService {
   
   constructor(public http: Http) {
-    console.info('asdf',clientes)
   }
-  
+
   getClientes ():Promise<any>{
     return new Promise( (resolve) => resolve(clientes) );
   }
-  getCliente (id):Promise<any>{
-    return new Promise( (resolve) => resolve(cliente) );
+  getCliente (cli):Promise<any>{
+    return new Promise( (resolve) => {
+      var newCliente = {}
+      for( let key in cliente )newCliente[key] = cli[key] ? cli[key] : cliente[key]
+      resolve(newCliente)
+    } );
   }
   getPontos (id):Promise<any>{
     return new Promise( (resolve) => resolve(pontos) );
