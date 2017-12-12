@@ -39,6 +39,7 @@ header{
 }
 
 #filterUsers{
+    margin: 0 $padding*-1;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -46,6 +47,7 @@ header{
     -ms-flex-pack: start;
     justify-content: flex-start;
     color:$text-strong;
+    .button,
     input{
         background: transparent;
         border-width: 0px;
@@ -58,6 +60,7 @@ header{
         }
     }
     .button{
+        right: 0px;
         height: $hearder;
         width: $hearder;
         border-left-width: 1px;

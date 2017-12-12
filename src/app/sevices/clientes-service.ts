@@ -10,13 +10,14 @@ export class ClienteService {
   constructor(public http: Http) {
   }
 
-  getClientes ():Promise<any>{
-    return new Promise( (resolve) => resolve(clientes) );
+  getClientes (filter=''):Promise<any>{
+    return new Promise( (resolve) => resolve(clientes.filter( cliente =>
+      cliente.nome.toLocaleLowerCase().indexOf(filter.toLocaleLowerCase()) != -1 ) ));
   }
   getCliente (cli):Promise<any>{
     return new Promise( (resolve) => {
       var newCliente = {}
-      for( let key in cliente )newCliente[key] = cli[key] ? cli[key] : cliente[key]
+      for( let key in cliente ) newCliente[key] = cli[key] ? cli[key] : cliente[key]
       resolve(newCliente)
     } );
   }

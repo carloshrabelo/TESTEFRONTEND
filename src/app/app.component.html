@@ -3,8 +3,8 @@
   <div *ngIf="!clienteSelecionado">
     <header>
         <form id="filterUsers" action="">
-            <input type="search"/>        
-            <input class="button" type="submit" value="🔎">
+            <input type="search" (input)="onSearchChange($event.target.value)"/>        
+            <button class="button fa fa-search" type="submit"></button>
         </form>
       </header>
       <section>
