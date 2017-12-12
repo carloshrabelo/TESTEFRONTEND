@@ -15,17 +15,9 @@ export class ClienteService {
     return new Promise( (resolve) => resolve(clientes) );
   }
   getCliente (id):Promise<any>{
-    return new Promise( (resolve) => resolve(clientes) );
+    return new Promise( (resolve) => resolve(cliente) );
   }
   getPontos (id):Promise<any>{
     return new Promise( (resolve) => resolve(pontos) );
-  }
-  
-  postData (request: any):Promise<any>{
-    return this.http.post('../mock/clientes.json', request)
-                .toPromise()
-                .then(response => {
-						        return response.json();
-				        });
   }
 }

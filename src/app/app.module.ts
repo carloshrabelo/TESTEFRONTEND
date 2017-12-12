@@ -8,6 +8,7 @@ import { AdicionarNotaComponent } from './modules/adicionar-nota/adicionar-nota.
 import { CadastrarNotasComponent } from './modules/cadastrar-notas/cadastrar-notas.component';
 
 import { ClienteService } from './sevices/clientes-service';
+import { ClienteDetailComponent } from './modules/cliente-detail/cliente-detail.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { ClienteService } from './sevices/clientes-service';
     AppComponent,
     BigNumberComponent,
     AdicionarNotaComponent,
-    CadastrarNotasComponent
+    CadastrarNotasComponent,
+    ClienteDetailComponent
   ],
   imports: [
     BrowserModule,HttpModule

@@ -15,7 +15,16 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let arr of [1,2,3]" >
+                <tr *ngIf="!notas" >
+                  <td> --- </td>
+                  <td> --- </td>
+                  <td> --- </td>
+                  <td> --- </td>
+                  <td> --- </td>
+                  <td>
+                  </td>
+                </tr>
+                <tr *ngFor="let nota of notas" >
                   <td>Loja</td>
                   <td>No da Nota</td>
                   <td>Data da nota</td>
